@@ -1,5 +1,8 @@
 package police_theif.vault;
 
+/**
+ * 금고 클래스 - 고정 위치 (10, 10) - 잔액 관리 (초기 10만원) - synchronized로 동시 접근 제어
+ */
 public class Vault {
 	// === 변수 ===
 	private int balance; // 현재 잔액
@@ -24,8 +27,8 @@ public class Vault {
 
 	// === 메서드 ===
 	/**
-	 * 금고에서 돈 훔치기 - synchronized: 한 번에 1명만 접근 가능 - balance >= amount일 때만 훔침 -
-	 * totalStolen 누적
+	 * 금고에서 돈 훔치기 - synchronized: 한 번에 1명만 접근 가능 - balance >= amount일 때만 훔침
+	 * -totalStolen 누적
 	 * 
 	 * @param amount 훔칠 금액
 	 */
