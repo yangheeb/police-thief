@@ -74,7 +74,7 @@ public class Police implements Runnable {
 					patrol();
 				}
 
-			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -121,7 +121,7 @@ public class Police implements Runnable {
 	 * 
 	 * @return
 	 */
-	private synchronized int[] getPosition() {
+	public synchronized int[] getPosition() {
 		return new int[] { x, y };
 	}
 
@@ -186,5 +186,9 @@ public class Police implements Runnable {
 					x++;
 				break;
 		}
+	}
+	
+	public int getArrestCount() {
+		return arrestCount.get();
 	}
 }
