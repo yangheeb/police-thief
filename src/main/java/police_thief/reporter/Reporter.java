@@ -94,9 +94,10 @@ public class Reporter implements Runnable {
                     + " | 훔친 금액: " + thief.getStolenAmount());
         }
 	    
+	    int[] policePosition = police.getPosition();
 	    // 경찰 위치 출력
 	    System.out.println();
-        System.out.println("경찰 위치: (" + police.getX() + "," + police.getY() + ")");
+        System.out.println("경찰 위치: (" + policePosition[0] + "," + policePosition[1] + ")");
 	    
 	        
 	}
@@ -118,8 +119,10 @@ public class Reporter implements Runnable {
             return 'V';
         }
 		
+		int[] policePosition = police.getPosition();
+		
 		// 경찰 위치 'P' 심볼 반환 
-		if (police.getX() == x && police.getY() == y) {
+		if (policePosition[0] == x && policePosition[1] == y) {
             return 'P';
         }
 		
